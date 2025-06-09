@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "687930698850",
+    "firebase_url": "https://zira-56797-default-rtdb.firebaseio.com",
+    "project_id": "zira-56797",
+    "storage_bucket": "zira-56797.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:687930698850:android:7c1c3f1211513e1c69b53b",
+        "android_client_info": {
+          "package_name": "com.tokodizital.zira"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB-Xhg92BOqR8tKdOkB-U278SCWlVXFt60"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

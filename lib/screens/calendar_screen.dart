@@ -310,23 +310,23 @@ class _CalendarScreenState extends State<CalendarScreen> {
         selectedItemColor: Colors.pinkAccent,
         unselectedItemColor: Colors.grey,
         items: const [
-          BottomNavigationBar.item(
+          BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Beranda',
           ),
-          BottomNavigationBar.item(
+          BottomNavigationBarItem(
             icon: Icon(Icons.calendar_today),
             label: 'Kalender',
           ),
-          BottomNavigationBar.item(
+          BottomNavigationBarItem(
             icon: Icon(Icons.alarm),
             label: 'Alarm',
           ),
-          BottomNavigationBar.item(
+          BottomNavigationBarItem(
             icon: Icon(Icons.check_box),
             label: 'To-Do',
           ),
-          BottomNavigationBar.item(
+          BottomNavigationBarItem(
             icon: Icon(Icons.account_balance_wallet),
             label: 'Budget',
           ),

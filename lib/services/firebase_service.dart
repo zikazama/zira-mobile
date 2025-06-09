@@ -8,6 +8,9 @@ class FirebaseService {
   final FirebaseFirestore _firestore = FirebaseFirestore.instance;
   final FirebaseStorage _storage = FirebaseStorage.instance;
   final FirebaseMessaging _messaging = FirebaseMessaging.instance;
+  
+  // Expose firestore for direct access
+  FirebaseFirestore get firestore => _firestore;
 
   // Auth methods
   Future<UserCredential> signInWithEmailAndPassword(String email, String password) async {
@@ -73,6 +76,10 @@ class FirebaseService {
   Future<void> saveMenstruationData(String userId, Map<String, dynamic> menstruationData) async {
     await _firestore.collection('users').doc(userId).collection('menstruation').add(menstruationData);
   }
+  
+  Future<void> updateMenstruationData(String userId, String dataId, Map<String, dynamic> menstruationData) async {
+    await _firestore.collection('users').doc(userId).collection('menstruation').doc(dataId).update(menstruationData);
+  }
 
   Future<QuerySnapshot> getMenstruationData(String userId) async {
     return await _firestore.collection('users').doc(userId).collection('menstruation').orderBy('date', descending: true).get();
@@ -85,6 +92,19 @@ class FirebaseService {
 
   Future<void> updateBudgetGoal(String userId, String budgetId, Map<String, dynamic> budgetData) async {
     await _firestore.collection('users').doc(userId).collection('budget').doc(budgetId).update(budgetData);
+  }
+  
+  // Alarm methods
+  Future<void> addAlarm(String userId, Map<String, dynamic> alarmData) async {
+    await _firestore.collection('users').doc(userId).collection('alarms').add(alarmData);
+  }
+  
+  Future<void> updateAlarm(String userId, String alarmId, Map<String, dynamic> alarmData) async {
+    await _firestore.collection('users').doc(userId).collection('alarms').doc(alarmId).update(alarmData);
+  }
+  
+  Future<void> deleteAlarm(String userId, String alarmId) async {
+    await _firestore.collection('users').doc(userId).collection('alarms').doc(alarmId).delete();
   }
 
   // Storage methods

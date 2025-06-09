@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+
 class UserModel {
   final String id;
   final String email;
@@ -26,13 +28,15 @@ class UserModel {
       name: map['name'],
       partnerId: map['partnerId'],
       partnerEmail: map['partnerEmail'],
-      relationshipDate: map['relationshipDate'] != null 
-          ? (map['relationshipDate'] as Timestamp).toDate() 
-          : null,
+      relationshipDate:
+          map['relationshipDate'] != null
+              ? (map['relationshipDate'] as Timestamp).toDate()
+              : null,
       fcmToken: map['fcmToken'],
-      backgroundImages: map['backgroundImages'] != null 
-          ? List<String>.from(map['backgroundImages']) 
-          : null,
+      backgroundImages:
+          map['backgroundImages'] != null
+              ? List<String>.from(map['backgroundImages'])
+              : null,
     );
   }
 
