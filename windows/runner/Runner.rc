@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.zira" "\0"
-            VALUE "FileDescription", "zira_mobile" "\0"
+            VALUE "CompanyName", "com.example" "\0"
+            VALUE "FileDescription", "zira_new" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "zira_mobile" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2025 com.zira. All rights reserved." "\0"
-            VALUE "OriginalFilename", "zira_mobile.exe" "\0"
-            VALUE "ProductName", "zira_mobile" "\0"
+            VALUE "InternalName", "zira_new" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2025 com.example. All rights reserved." "\0"
+            VALUE "OriginalFilename", "zira_new.exe" "\0"
+            VALUE "ProductName", "zira_new" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
